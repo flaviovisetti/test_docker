@@ -1,0 +1,12 @@
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg %>
+<% end %>
+
+<%= simple_form_for @company do |f| %>
+  <%= f.input :company_name, label: 'Razão Social' %>
+  <%= f.input :address, label: 'Endereço' %>
+  <%= f.input :district, label: 'Bairro' %>
+  <%= f.input :city, label: 'Cidade' %>
+  <%= f.input :state, label: 'Estado' %>
+  <%= f.submit 'Register' %>
+<% end %>
